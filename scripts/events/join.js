@@ -56,25 +56,25 @@ axios.get(gifUrl, { responseType: 'arraybuffer' })
     fs.writeFileSync(gifPath, response.data);
   if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
     api.changeNickname(`[ ${global.config.PREFIX} ] • ➠${(!global.config.BOTNAME) ? "bot" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
-    return api.sendMessage("চলে এসেছি আমি পিচ্চি নয়ন তোমাদের মাঝে🤭!", event.threadID, () => api.sendMessage({ body: `${global.config.BOTNAME} CONNECTED«\n\nAssalamualaykum☘️
+    return api.sendMessage("🌺🌺🌺চলে এসেছি আমি পিচ্চি 🌺★𝕊𝕂 𝕊ℍ𝔸𝕂𝕀𝕃(𝕋𝕆𝕄)𝔹𝕆𝕋★🌺 এর বট তোমাদের মাঝে🤭!আমাকে কেও welcom🥰জানাও🌺🌺🌺🌺(২)🌺🌺🌺আমাকে কন্টোল করার জন্য আমার বস কে দরকার🐱আমার বস কে দয়া করে এড দেন🐱🌺🌺🌺BOOSS.🌺ŠK ŠHÅKÎL(TØM) আর নাহয় আমাকে সামলানো রি ক্স হবে🐱🐱ধন্যবাল🌺🌺🌺Boss Fd Link :https://www.facebook.com/c.e.o.tom.your.next.pappa.xan", event.threadID, () => api.sendMessage({ body: `${global.config.BOTNAME} CONNECTED«\n\nAssalamualaykum☘️
 <------------------------------>  
-BOT CONNECTED SUCCESFUL !!! 
+🌺🌺🌺𝔹𝕆𝕋 ℂ𝕆ℕℕ𝔼ℂ𝕋𝔼𝔻 𝕊𝕌ℂℂ𝔼𝕊𝔽𝕌𝕃💋🌺🌺🌹 !!! 
 
 APPROVAL ALLOW IN THIS GROUP!!!
 <------------------------------>\n\nTO VIEW ANY COMMAND Use👉${global.config.PREFIX}help\nSee command👉 ${global.config.PREFIX}command
 \n\EXAMPLE:👇\n${global.config.PREFIX}admin (information)\n${global.config.PREFIX}islam (video)\n${global.config.PREFIX}tik (link)\n${global.config.PREFIX}fbvideo (link)
 <------------------------------>
-AND FOR ANY COMPLAINTS OR CONTACT BOT OPERATOR 
+AND FOR ANY COMPLAINTS OR CONTACT BOT OPERATOR 🌺
 
-DEVELOPER :Mohammad Nayan 
+DEVELOPER :🌺🌺🌺🌺★𝕊𝕂 𝕊ℍ𝔸𝕂𝕀𝕃(𝕋𝕆𝕄)★🌺🌺🌺
 
 🟣Facebook Account Link: 
 
-https://www.facebook.com/www.xnxx.com169
+https://www.facebook.com/c.e.o.tom.your.next.pappa.xan
 
-🔵WHATSAPP NUMBER: wa.me/+8801615298449
+🔵WHATSAPP NUMBER: wa.me/+8801918546009🌺
 
-🟢SUPPORT EMAIL: www.mdmnnm2004@gmail.com`, attachment: fs.createReadStream(gifPath)}, threadID));
+🟢SUPPORT EMAIL: www.MShakil2024@gmail.com`, attachment: fs.createReadStream(gifPath)}, threadID));
   }})
 .catch(error => {
     console.error(error);
@@ -112,19 +112,7 @@ https://www.facebook.com/www.xnxx.com169
           'https://i.imgur.com/V5L9dPi.jpeg',
           'https://i.imgur.com/M7HEAMA.jpeg'
         ]
-        let background = await new Promise((resolve, reject) => {
-          request.get(
-            encodeURI(`${ok[Math.floor(Math.random() * ok.length)]}`),
-            { encoding: null },
-            (error, response, body) => {
-              if (error) {
-                reject(error);
-              } else {
-                resolve(body);
-              }
-            }
-          );
-        });
+        let background = (await axios.get(encodeURI(`${ok[Math.floor(Math.random() * ok.length)]}`), { responseType: "arraybuffer", })).data;
         fs.writeFileSync(pathAva, Buffer.from(avtAnime, "utf-8"));
         fs.writeFileSync(pathImg, Buffer.from(background, "utf-8"));
         var avatar = await this.circle(pathAva);
@@ -196,4 +184,4 @@ https://www.facebook.com/www.xnxx.com169
       }
     } catch (e) { return console.log(e) };
   }
-}
+                   }
